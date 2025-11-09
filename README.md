@@ -3,4 +3,11 @@ ChromeBook安装成Fydeos之后，风扇、键盘背光无法控制，发现ecto
 开启Linux子系统之后要安装一些依赖
 apt install -y libftdi1 libusb-1.0-0
 apt install -y libftdi1-dev libusb-1.0-0-dev
-每次运行需要在root下执行，目前还没有找到合适的方案。
+
+使用root复制脚本到可执行路径
+sudo cp /usr/local/bin/fydectl.sh /usr/local/bin/fydectl
+设置可执行权限
+sudo chmod +x /usr/local/bin/fydectl
+
+即使在非root下也可以执行了
+fydectl
